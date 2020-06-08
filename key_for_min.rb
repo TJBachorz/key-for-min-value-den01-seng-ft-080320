@@ -8,10 +8,12 @@ def key_for_min_value(name_hash)
       lowest = name_hash[key]
     elsif name_hash[key] < lowest
       lowest = name_hash[key]
+    end
   end
   name_hash.each do |key|
     if name_hash[key] == lowest
       return key
+    end
   end
   lowest
 end
