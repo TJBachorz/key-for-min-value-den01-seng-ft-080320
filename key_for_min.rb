@@ -10,7 +10,10 @@ def key_for_min_value(name_hash)
     binding.pry  
     elsif name_hash[key] < lowest
       lowest = name_hash[key]
-    elsif 
+    elsif name_hash[key] == name_hash.length - 1 
+      if name_hash[key] == lowest
+      binding.pry
+      return key
     end
   end
   name_hash.each do |key|
