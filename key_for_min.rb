@@ -5,10 +5,20 @@ require 'pry'
 
 
 def key_for_min_value(name_hash)
-  hash_array = []
+  #hash_array = []
   lowest = nil 
   name_hash.each do |key, value|
-    puts key
+    #hash_array << { key => value }
+    if lowest == nil
+      lowest = value
+    elsif lowest > value
+      lowest = value
+    end
+  end
+  name_hash.each do |key, value|
+    if name_hash[key] == lowest
+      return key
+    end
   end
 end
     
