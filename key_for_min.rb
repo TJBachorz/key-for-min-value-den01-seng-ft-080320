@@ -15,12 +15,8 @@ def key_for_min_value(name_hash)
         if name_hash[key] == lowest
         binding.pry
           return key
-    end
-  end
-  name_hash.each do |key|
-    if name_hash[key] == lowest
-      binding.pry
-      return key
+        end
+      end
     end
   end
 end
